@@ -143,6 +143,9 @@ public class UsuarioControllerTest {
 	@Order(6)
 	@DisplayName("Login do Usuário 💻")
 	public void deveAutenticarUsuario() {
+		
+		usuarioService.cadastrarUsuario(new Usuario(0L, 
+				"Maria Clara Ruiz", "mariaclararuiz@email.com.br", "45879635", "https://i.imgur.com/5M2p5Wb.jpg"));
 
 		HttpEntity<UsuarioLogin> corpoRequisicao = new HttpEntity<UsuarioLogin>(new UsuarioLogin(0L, 
 			"", "mariaclararuiz@email.com.br", "45879635", "", ""));
